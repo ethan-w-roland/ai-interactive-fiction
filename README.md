@@ -16,6 +16,8 @@ To use:
 
 Tested with GPT-4. May still function with GPT-3.5-turbo but your mileage may vary.
 
-Demo
+Demo Video:
 
 [![DEMO VIDEO LINK](https://img.youtube.com/vi/JHzeb39VqkM/0.jpg)](https://www.youtube.com/watch?v=JHzeb39VqkM)
+
+[https://www.youtube.com/watch?v=JHzeb39VqkM](https://www.youtube.com/watch?v=JHzeb39VqkM)
