@@ -54,7 +54,7 @@ if LANGUAGE == "English":
 
 while True:
 
-    did_input = False
+    did_submit = False
     while True:
 
         if not DEBUG:
@@ -75,12 +75,12 @@ while True:
             if DEBUG: print("ERROR: all assistant responses must start with a THINK message")
             messages.append({"role":"user","content":"ERROR: all assistant responses must start with a THINK message"})
 
-        elif "INPUT:" in response:
-            did_input = True
-            #make game input
-            command = response.split("INPUT:")[1].strip()
+        elif "SUBMIT:" in response:
+            did_submit = True
+            #get game instruction
+            command = response.split("SUBMIT:")[1].strip()
             print(f"[{command}]")
-            #send input to inform
+            #send instruction to inform
             game_response = do_step(env, command).strip()
             messages.append({"role":"system","content":f"GAME: {game_response}"})
             if DEBUG:
@@ -88,15 +88,15 @@ while True:
                 print(f"<{game_text}>")
     
         elif "DISPLAY:" in response:
-            if did_input: print("")
+            if did_submit: print("")
             output = response.split("DISPLAY:")[1].strip()
             #go to the beginning of the previous line
             print(output + "\n")
             break
     
         else:
-            if DEBUG: print("ERROR: all assistant responses must contain either INPUT or DISPLAY")
-            messages.append({"role":"user","content":"ERROR: all assistant responses must contain either INPUT or DISPLAY"})
+            if DEBUG: print("ERROR: all assistant responses must contain either SUBMIT or DISPLAY")
+            messages.append({"role":"user","content":"ERROR: all assistant responses must contain either SUBMIT or DISPLAY"})
 
     #get user input
     line = input("> ")
