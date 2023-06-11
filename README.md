@@ -15,3 +15,7 @@ To use:
 |-l|sets the gameplay language for automatic translations (experimental)|English|
 
 Tested with GPT-4. May still function with GPT-3.5-turbo but your mileage may vary.
+
+Demo
+
+[![DEMO VIDEO LINK](https://img.youtube.com/vi/JHzeb39VqkM/0.jpg)](https://www.youtube.com/watch?v=JHzeb39VqkM)
