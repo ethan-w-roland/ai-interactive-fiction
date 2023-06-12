@@ -82,7 +82,7 @@ while True:
             print(f"[{command}]")
             #send instruction to inform
             game_response = do_step(env, command).strip()
-            messages.append({"role":"system","content":f"GAME: {game_response}"})
+            messages.append({"role":"user","content":f"GAME: {game_response}"})
             if DEBUG:
                 game_text = " | ".join([re.sub("\s+"," ",line) for line in game_response.split("\n") if line.strip() != ""])
                 print(f"<{game_text}>")
