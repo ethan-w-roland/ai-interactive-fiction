@@ -11,7 +11,7 @@ To use:
 |Flag|Function|Default|
 |-|-|-|
 |-d|toggles debug|False|
-|-m|sets open model type, either gpt-4 or gpt-3.5-turbo|gpt-4|
+|-m|sets Open AI model type, either gpt-4 or gpt-3.5-turbo|gpt-4|
 |-l|sets the gameplay language for automatic translations (experimental)|English|
 
 Tested with GPT-4. May still function with GPT-3.5-turbo but your mileage may vary.
